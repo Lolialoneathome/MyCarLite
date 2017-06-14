@@ -662,6 +662,53 @@ routerLink:focus {
     background-image: url("assets/images/fast_sell_jum.jpg");
 }
 
+.jum-history {
+    background-image: url("assets/images/about-us-jum.jpg");
+}
+
+.jum-employess {
+    background-image: url("assets/images/emp_jum.jpg");
+}
+
+.jum-news {
+    background-image: url("assets/images/special-jum.jpg");
+}
+
+.jum-contacts {
+    background-image: url("assets/images/contacts_jum.jpg");
+}
+
+.jum-feedback {
+    background-image: url("assets/images/jum-feedback.jpg");
+}
+
+.row-item {
+  padding: 30px;
+}
+
+.bordered {
+  border-width: 1px;
+  border-color: rgb(219, 219, 219);
+  border-style: solid;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.pull-left-on-big {
+  float: left;
+  padding-right: 30px
+}
+@media screen and (max-width: 760px) {
+  .pull-center-on-small {
+  	float: none;
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 3px;
+  }
+}
+
 .no-padding {
   padding: 0px;
 }
