@@ -1,0 +1,902 @@
+@font-face {
+    font-family: BMW Type Global Pro; /* Имя шрифта */
+    src: url(../assets/fonts/BMWTypeWebBoldAll_lite.woff2); /* Путь к файлу со шрифтом */
+   }
+
+
+@font-face {
+    font-family: ALS Rubl; /* Имя шрифта */
+    src: url(../assets/fonts/rouble.otf); /* Путь к файлу со шрифтом */
+   }
+
+
+
+.header1 {
+  font-size: 24px;
+  font-family: "BMW Type Global Pro";
+  color: rgb(84, 84, 84);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.header2 {
+  font-size: 14px;
+  font-family: "BMW Type Global Pro";
+  color: rgb(84, 84, 84);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.header3 {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(84, 84, 84);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(84, 84, 84);
+  line-height: 1.2;
+  padding-top: 70px;
+}
+
+
+.no-padding {
+  padding: 0px;
+}
+
+.red-bold-text {
+	color: red;
+	font-weight: bold;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.logo-img {
+  height: 100%;
+}
+
+.border-right {
+	border-right: 1px rgb(219, 219, 219) solid;
+}
+
+.border-left {
+	border-left: 1px rgb(219, 219, 219) solid;
+}
+
+.search-but {
+	padding: 15px;
+  width: 50px;
+}
+
+.white-back {
+	background-color: rgb(255, 255, 255);
+}
+
+.bg-jum-img {
+	background-image : url(../assets/images/slide_picture.png);
+	min-height: 429px;
+}
+
+.jum-square {
+	border-radius: 4px;
+	background-color: rgb(255, 255, 255);
+	opacity: 0.902;
+	box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.2);
+	height: 192px;
+	padding: 25px;
+	margin-top: 140px;
+}
+
+.carousel-indicators li { visibility: hidden; }
+
+.right.carousel-control, .left.carousel-control {
+    display: none;
+}
+
+.slide-wrapper {
+    position: relative
+}
+
+.red {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.red-content {
+    width: 100%;
+    height: 300px;
+}
+@media (min-width: 768px) {
+    .carousel-caption {
+        text-align: left;
+        padding-right: 300px;
+    }
+    .red {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        padding: 20px 0;
+        margin-left: -375px;
+    }
+    .red-content {
+      border-radius: 4px;
+      background-color: rgb(255, 255, 255);
+      opacity: 0.902;
+      box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.2);
+      height: 10%;
+      padding: 15px;
+      margin-top: 190px;
+      width: 30%;
+      float: left;
+      margin-right:15px;
+    }
+}
+@media (min-width: 992px) {
+    .red {
+        width: 970px;
+        margin-left: -485px;
+    }
+}
+@media (min-width: 1200px) {
+    .red {
+        width: 1170px;
+        margin-left: -585px;
+    }
+}
+
+/* MISC */
+#homepage-feature .item {
+    overflow: hidden;
+    height: 100%;
+    height: 500px;
+    background-color: transparent;
+    background-size: cover;
+}
+#homepage-feature > .carousel-control {
+    width: 30px;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: none;
+    filter: none;
+    opacity: 1;
+}
+#homepage-feature > .carousel-control span {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.btn-custom-red  {
+	background-color: rgb(227, 30, 36);
+	border: none;
+	border-radius: 0px;
+}
+.btn-custom-red:active{
+	background-color: rgb(227, 30, 36);
+}
+
+.btn-primary-custom-red-custom-red, .btn-primary-custom-red:focus, {
+    background-color: rgb(227, 30, 36);
+}
+
+.btn-primary-custom-red:hover, .btn-primary-custom-red:active {
+	background-color: rgba(227, 30, 36, 0.5);
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.dark-gray-back {
+	background-color: rgb(47, 45, 45);
+}
+
+.footer-content {
+	padding: 25px;
+}
+
+.footer-fields {
+	padding: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.combined-components {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.padding-top-25
+{
+  padding-top: 25px;
+}
+
+.bordered {
+	border-width: 1px;
+	border-color: rgb(219, 219, 219);
+	border-style: solid;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hideOnSmallScreen {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hideOnLargeScreen {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+	.row {
+		position: relative;
+	}
+
+	.navbar-header {
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+
+	.navbar-brand {
+		box-sizing: border-box;
+		text-align: center;
+		width: 100%;
+	}
+
+	.navbar-right {
+		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.navbar-right > li {
+		display: inline-block;
+		margin-top: 4px;
+	}
+}
+
+.navbar-toggle {
+  float: none;
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 800px){
+  .navbar-right > li {
+    margin-top: 0px;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: red;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.collapsed-nav {
+  margin: 0px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.a-tel, .a-tel:hover, .a-tel:active, .a-tel:focus {
+  padding: 0px;
+  line-height: 20px;
+  position: relative;
+  color: #777;
+  text-decoration: none;
+}
+
+routerLink:focus {
+    outline: none;
+}
+
+.hr-spec {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(89, 89, 89);
+}
+
+.svg-container{
+ display: inline-flex;
+ vertical-align: middle;
+}
+
+.svg {
+  padding: 5px;
+}
+
+.gray-back {
+	background-color: rgb(242, 242, 242);
+}
+
+.red-back {
+	border-width: 1px;
+	border-color: rgb(230, 230, 230);
+	border-style: solid;
+	border-radius: 4px;
+	background-color: rgba(230, 60, 60, 0.9);
+  color: white;
+}
+
+.jum-button {
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .hide-border-on-small {
+  	border: none;
+  }
+
+  .resp-text-center {
+    text-align: center;
+  }
+}
+
+
+.btn-lg-custom {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) {
+
+.row-flex, .row-flex > div[class*='col-md'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+}
+
+.cursior-pointer {
+	  cursor: pointer;
+}
+
+.small-icons {
+	height: 48px;
+  display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.item {
+	padding: 10px;
+	height: 250px
+}
+
+.centered-icons {
+	display: flex;
+	justify-content: center;
+	padding: 25px;
+}
+
+.red-back {
+	border-width: 1px;
+	border-color: rgb(230, 230, 230);
+	border-style: solid;
+	border-radius: 4px;
+	background-color: rgba(230, 60, 60, 0.9);
+  color: white;
+}
+
+.white-back {
+	background-color: rgb(255, 255, 255);
+}
+
+.header2-white {
+  font-size: 14px;
+  font-family: "BMW Type Global Pro";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.red-line-img {
+  display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+
+
+
+.product-name-text {
+	font-size: 16.569px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	font-weight: bold;
+	line-height: 1.2;
+	padding : 2px;
+}
+
+.product-description {
+	padding : 10px;
+}
+
+.product-price-text {
+  font-size: 16.569px;
+  font-family: "Open Sans";
+  color: rgb(227, 30, 36);
+  line-height: 1.2;
+  padding : 2px;
+}
+
+.product-detailed {
+	font-size: 12px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: left;
+	padding-top : 10px;
+	padding-bottom : 10px;
+}
+
+.product-button {
+	float: left;
+	padding: 15px;
+  border-left: 1px solid;
+}
+
+.product-button-text {
+	font-size: 14px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: right;
+}
+
+.rouble {
+  font-size: 16px;
+  font-family: "ALS Rubl";
+  color: rgb(227, 30, 36);
+  line-height: 1.2;
+}
+
+.bordered {
+  border-width: 1px;
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+  .list-group-item {
+      border: none;
+  }
+
+.car-img {
+  width: 100%;
+}
+
+
+.comment-author-text {
+	font-size: 14px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	font-weight: bold;
+	line-height: 1.2;
+	text-align: left;
+	padding: 5px;
+}
+
+.comment-date-text {
+	font-size: 12px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: left;
+	padding: 5px;
+}
+
+.comment-title-text {
+	font-size: 14px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	font-weight: bold;
+	line-height: 1.571;
+	text-align: left;
+	padding: 5px;
+}
+
+.comment-content-text {
+	font-size: 14px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.571;
+	text-align: left;
+	overflow: hidden;
+  padding: 5px;
+}
+
+.comment-title-text::after {
+    z-index: -1;
+    content: ''; /* Выводим элемент */
+    /*position: absolute; /* Абсолютное позиционирование */
+    right: 0; bottom: 0; /* Положение элемента */
+    width: 100%; /* Ширина градиента*/
+    height: 80%; /* Высота родителя */
+    /* Градиент */
+    background: -moz-linear-gradient(bottom, rgba(255,255,255, 0.5), white);
+    background: -webkit-linear-gradient(bottom, rgba(255,255,255, 0.5), white );
+    background: -o-linear-gradient( bottom, rgba(255,255,255, 0.5), white );
+    background: -ms-linear-gradient(bottom, rgba(255,255,255, 0.5), white );
+    background: linear-gradient(to bottom, rgba(255,255,255, 0.5), white );
+   }
+
+.btn-gray {
+  background-color: rgb(242, 242, 242);
+  color: rgb(84, 84, 84);
+  z-index: 1;
+}
+
+.btn-gray:hower {
+  background-color: rgb(242, 242, 242);
+  color: rgb(84, 84, 84);
+  z-index: 1;
+}
+
+.show-full-comment {
+	padding: 15px;
+}
+
+.comment-info {
+	height: 150px;
+	overflow: hidden;
+}
+
+.jumbotron {
+  background-size: cover;
+  height: 100%;
+  margin-bottom: 0;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+}
+
+.jum-specials {
+  background-image: url("assets/images/special-jum.jpg");
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.pull-left-on-big {
+  float: left;
+  padding-right: 30px
+}
+@media screen and (max-width: 760px) {
+  .pull-center-on-small {
+  	float: none;
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 3px;
+  }
+}
+
+.row-item {
+  padding: 30px;
+}
+
+.bordered {
+  border-width: 1px;
+  border-color: rgb(219, 219, 219);
+  border-style: solid;
+}
+
+
+.product-name-text {
+	font-size: 16.569px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	font-weight: bold;
+	line-height: 1.2;
+	padding : 2px;
+}
+
+.product-description {
+	padding : 10px;
+}
+
+.product-price-text {
+  font-size: 16.569px;
+  font-family: "Open Sans";
+  color: rgb(227, 30, 36);
+  line-height: 1.2;
+  padding : 2px;
+}
+
+.product-detailed {
+	font-size: 12px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: left;
+	padding-top : 10px;
+	padding-bottom : 10px;
+}
+
+.product-button {
+	float: left;
+	padding: 15px;
+  border-left: 1px solid;
+}
+
+.product-button-text {
+	font-size: 14px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: right;
+}
+
+.rouble {
+  font-size: 16px;
+  font-family: "ALS Rubl";
+  color: rgb(227, 30, 36);
+  line-height: 1.2;
+}
+
+.bordered {
+  border-width: 1px;
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+  .list-group-item {
+      border: none;
+  }
+
+.car-img {
+  width: 100%;
+}
+
+.padding-top-25 {
+  padding-top: 25px;
+}
+
+.padding-left-0 {
+	padding-left: 0px;
+}
+
+.form-control + .glyphicon {
+    position: absolute;
+    right: 0;
+    padding: 8px 27px;
+}
+
+.form-control-red {
+    border:1px solid red;
+}
+
+.btn-gray {
+  background-color: rgb(242, 242, 242);
+  color: rgb(84, 84, 84);
+  z-index: 1;
+}
+
+.btn-gray:hower {
+  background-color: rgb(250, 250, 250);
+  color: rgb(84, 84, 84);
+  z-index: 1;
+}
+
+.jum-order {
+  background-image: url("assets/images/order.jpg");
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(232, 232, 232);
+}
+
+.gray-line {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+textarea {
+	resize: none;
+}
+
+.padding-top-25 {
+  padding-top: 25px;
+}
+
+.padding-right-left-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.btn-lg-custom {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.big_checkbox {
+    width:2vw;
+    height:2vh;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.btn-vertical-on-small
+	{
+		vertical-align: middle;
+    display: block;
+		width: 100%;
+		padding-right: 0px;
+		padding-left: 0px;
+		padding-top: 15px;
+	}
+
+}
+
+.btn-gray {
+  background-color: rgb(242, 242, 242);
+  color: rgb(84, 84, 84);
+  z-index: 1;
+}
+
+.btn-gray:hower {
+  background-color: rgb(250, 250, 250);
+  color: rgb(84, 84, 84);
+  z-index: 1;
+}
+
+.product-name-text {
+	font-size: 16.569px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	font-weight: bold;
+	line-height: 1.2;
+	padding : 2px;
+}
+
+.product-description {
+	padding : 10px;
+}
+
+.product-price-text {
+  font-size: 16.569px;
+  font-family: "Open Sans";
+  color: rgb(227, 30, 36);
+  line-height: 1.2;
+  padding : 2px;
+}
+
+.product-detailed {
+	font-size: 12px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: left;
+	padding-top : 10px;
+	padding-bottom : 10px;
+}
+
+.product-button {
+	float: left;
+	padding: 15px;
+  border-left: 1px solid;
+}
+
+.product-button-text {
+	font-size: 14px;
+	font-family: "Open Sans";
+	color: rgb(84, 84, 84);
+	line-height: 1.2;
+	text-align: right;
+}
+
+.list-group-item {
+		border: none;
+}
+
+.empty-car-img {
+	background-color: #e7e7e7;
+  padding: 70px 120px;
+}
