@@ -646,6 +646,22 @@ routerLink:focus {
   background-image: url("assets/images/special-jum.jpg");
 }
 
+.jum-valuate {
+  background-image: url("assets/images/valuate_jum.jpg");
+}
+
+.jum-comission {
+    background-image: url("assets/images/comission_sell_jum.jpg");
+}
+
+.jum-fastsell {
+    background-image: url("assets/images/fast_sell_jum.jpg");
+}
+
+.jum-tradein {
+    background-image: url("assets/images/fast_sell_jum.jpg");
+}
+
 .no-padding {
   padding: 0px;
 }
