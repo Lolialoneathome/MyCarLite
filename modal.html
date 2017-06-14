@@ -18,8 +18,6 @@
   <link rel="stylesheet" href="styles.css">
   <script src="js/header.js"></script>
   <script src="js/onload.js"></script>
-  <script src="js/stock.js"></script>
-
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -50,7 +48,7 @@
               <div class="form-group" style="display:inline;">
                 <div class="input-group" style="display:table;">
                   <span class="input-group-addon" style="width:1%;height: 50px;"></span>
-                  <input id="input-search" onfocusout="enableSearch()" class="form-control form-control-red" style="height: 50px;" name="search" placeholder="Найти автомобиль" autocomplete="off" autofocus="true" type="text">
+                  <input id="input-search" onfocusout="enableSearch()" class="form-control" style="height: 50px;" name="search" placeholder="Найти автомобиль" autocomplete="off" autofocus="true" type="text">
                 </div>
               </div>
             </form>
@@ -140,129 +138,77 @@
     </div>
   </div>
 
-  <div class="container combined-components">
-    <div class="row padding-top-25">
-        <div class="header1 text-center">Автомобили в наличии</div>
-        <div class="red-line-img">
-           <img class="img-responsive" src="assets/images/red_line.png" alt="line"/>
+  <div class="container">
+
+      <div class="row" id="feedback-container">
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                Посмотреть демо
+              </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title header2" id="myModalLabel">Купить выбранный автомобиль</h4>
+              </div>
+              <div class="modal-body">
+                <div style="padding: 15px" *ngFor="let special of specials">
+                  <div class="row bordered" style="padding: 0px">
+                    <div class="col-md-3 col-xs-12  no-padding">
+                      <img class="img-responsive pull-left-on-big pull-center-on-small" [src]=special.image alt="no icon"/>
+                    </div>
+                    <div class="col-md-9 col-xs-12">
+                      <div class="pull-center-on-small">
+                        <div class="header3" style="padding-top: 2%">{{special.title}}</div>
+                        <div style="padding-top: 2%">{{special.description}} <span class='rouble'>a</span></div>
+                        <div class="input-group"style="padding-top: 5%">
+                            <div class="media">
+                             <div class="media-left media-top">
+                              <img src="assets/images/read_more_btn.svg" style="padding: 3px" alt="@l!" class="media-object"/>
+                              </div>
+                             <div class="media-body">
+                                <span class="media-heading product-button-text media-middle">Подробнее</span>
+                             </div>
+                          </div>
+          							</div>
+                      </div>
+                    </div>
+                  <div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row padding-top-25">
+                        <div class="col-md-12">
+                              <input class="form-control" id="name" placeholder="ФИО">
+                        </div>
+              		</div>
+                  <div class="row padding-top-25">
+                            <div class="col-md-12">
+                                  <input class="form-control" id="name" placeholder="Телефон">
+                            </div>
+                  		</div>
+                      <div class="row padding-top-25">
+                                <div class="col-md-12">
+                                      <input class="form-control" id="name" placeholder="Email">
+                                </div>
+                      		</div>
+
+              </div>
+              <div class="modal-footer" style="text-align: left;">
+                <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" >Отправить</button>
+                <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
         </div>
-     </div>
-     <div class="row">
-     <p>Осуществите Вашу мечту — станьте владельцем лучшего автомобиля с пробегом.
-         В данном разделе Вас ждет широкий выбор автомобилей с пробегом, которые прошли полную техническую проверку. </p>
-
-         <p>Если Вы не нашли желаемый автомобиль, воспользуйтесь бесплатной услугой поиска нужного Вам автомобиля. Просто оставьте нам заявку с описанием и мы подберем для Вас оптимальный вариант.</p>
-     </div>
-
-     <div class="row text-center" style="padding-top: 50px">
-     <div [routerLink]="['/buy_order']" class="media btn btn-gray" style="text-align: center; margin: auto;">
-      <div class="media-left media-top" style="padding: 3px; border-right: 1px, solid, gray">
-       <img src="assets/images/pen.svg" alt="@l!" class="media-object"/>
-       </div>
-      <div class="media-body" style="width: auto; padding-left: 10px">
-         <span class="media-heading product-button-text media-middle">Оставить заявку</span>
       </div>
-     </div>
-     </div>
 
-     <div class="row" style="padding-top: 50px">
-       <div class="col-md-12 padding-left-0">
-         <input class="form-control" type="search" placeholder="Поиск автомобиля" />
-         <span class="glyphicon glyphicon-search"></span>
-       </div>
-     </div>
+  </div>
 
-     <div class="row padding-top-25">
-
-         <div class="col-md-2 padding-left-0">
-           <div class="form-group">
-             <select class="selectpicker form-control" title="Марка">
-                 <option>Mustard</option>
-                 <option>Ketchup</option>
-                 <option>Relish</option>
-             </select>
-           </div>
-         </div>
-
-         <div class="col-md-2 padding-left-0">
-           <div class="form-group">
-             <select class="selectpicker form-control" title="Модель">
-                 <option>Mustard</option>
-                 <option>Ketchup</option>
-                 <option>Relish</option>
-             </select>
-           </div>
-         </div>
-
-         <div class="col-md-2 padding-left-0">
-           <div class="form-group">
-             <select class="selectpicker form-control" title="Стоимость">
-                 <option>до 500 000</option>
-                 <option>500 000 - 1 000 000</option>
-                 <option>1 000 000 - 1 500 000</option>
-                 <option>1 500 000 - 2 000 000</option>
-                 <option>от 2 000 000</option>
-             </select>
-           </div>
-         </div>
-
-         <div class="col-md-2 padding-left-0">
-           <div class="form-group">
-             <select class="selectpicker form-control" data-size="5" data-dropup-auto="false" title="Год выпуска">
-                 <option>2000</option>
-                 <option>2001</option>
-                 <option>2002</option>
-                 <option>2003</option>
-                 <option>2004</option>
-                 <option>2005</option>
-                 <option>2006</option>
-                 <option>2007</option>
-                 <option>2008</option>
-                 <option>2009</option>
-                 <option>2010</option>
-                 <option>2011</option>
-                 <option>2012</option>
-                 <option>2013</option>
-                 <option>2014</option>
-                 <option>2015</option>
-                 <option>2016</option>
-                 <option>2017</option>
-             </select>
-           </div>
-         </div>
-
-         <div class="col-md-2 padding-left-0">
-           <div class="form-group">
-             <select class="selectpicker form-control" title="Коробка передач">
-                 <option>АТ</option>
-                 <option>МТ</option>
-                 <option>Робот</option>
-                 <option>Вариатор</option>
-             </select>
-           </div>
-         </div>
-
-         <div class="col-md-2 padding-left-0">
-           <div class="form-group">
-             <select class="selectpicker form-control" title="Привод">
-                 <option>Передний</option>
-                 <option>Задний</option>
-                 <option>Полный</option>
-             </select>
-           </div>
-         </div>
-       </div>
-
-       <div class="row padding-top-25">
-       <div id="stocks-container">
-
-       </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="modal-container">
-    </div>
 
   <footer class="dark-gray-back">
     <div class="container" style="padding-top: 50px;">
