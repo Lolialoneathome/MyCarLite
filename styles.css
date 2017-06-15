@@ -1,12 +1,12 @@
 @font-face {
     font-family: BMW Type Global Pro; /* Имя шрифта */
-    src: url(../assets/fonts/BMWTypeWebBoldAll_lite.woff2); /* Путь к файлу со шрифтом */
+    src: url(assets/fonts/BMWTypeWebBoldAll_lite.woff2); /* Путь к файлу со шрифтом */
    }
 
 
 @font-face {
     font-family: ALS Rubl; /* Имя шрифта */
-    src: url(../assets/fonts/rouble.otf); /* Путь к файлу со шрифтом */
+    src: url(assets/fonts/rouble.otf); /* Путь к файлу со шрифтом */
    }
 
 
@@ -982,4 +982,41 @@ textarea {
 .empty-car-img {
 	background-color: #e7e7e7;
   padding: 70px 120px;
+}
+
+ul.thumbnails.image_picker_selector li .thumbnail.selected {
+    border: 1px solid red;
+}
+
+
+
+ul.thumbnails.image_picker_selector li .thumbnail.selected {
+    background: none;
+}
+
+ul.thumbnails.image_picker_selector li .thumbnail {
+    padding: 0px;
+}
+
+.red-text-upper {
+  font-size: 24px;
+  font-family: "Open Sans";
+  color: rgb(227, 30, 36);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+
+.thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+      width:63px; height: 63px
+}
+.thumbnail img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 }

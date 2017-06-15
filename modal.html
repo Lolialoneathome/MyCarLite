@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.js"></script>
+
+
   <link rel="stylesheet" href="styles.css">
   <script src="js/header.js"></script>
   <script src="js/onload.js"></script>
@@ -148,60 +153,66 @@
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog" style="min-width: 900px;">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title header2" id="myModalLabel">Купить выбранный автомобиль</h4>
-              </div>
               <div class="modal-body">
-                <div style="padding: 15px" *ngFor="let special of specials">
-                  <div class="row bordered" style="padding: 0px">
-                    <div class="col-md-3 col-xs-12  no-padding">
-                      <img class="img-responsive pull-left-on-big pull-center-on-small" [src]=special.image alt="no icon"/>
-                    </div>
-                    <div class="col-md-9 col-xs-12">
-                      <div class="pull-center-on-small">
-                        <div class="header3" style="padding-top: 2%">{{special.title}}</div>
-                        <div style="padding-top: 2%">{{special.description}} <span class='rouble'>a</span></div>
-                        <div class="input-group"style="padding-top: 5%">
-                            <div class="media">
-                             <div class="media-left media-top">
-                              <img src="assets/images/read_more_btn.svg" style="padding: 3px" alt="@l!" class="media-object"/>
-                              </div>
-                             <div class="media-body">
-                                <span class="media-heading product-button-text media-middle">Подробнее</span>
-                             </div>
-                          </div>
-          							</div>
-                      </div>
-                    </div>
-                  <div>
-                  </div>
+              <div class="row">
+                <div class="col-md-7">
+                <div style="padding: 15px;">
+                  <img id="popup-moreinfo-car" class="img-responsive" style=" height: 100%; width: 100%;"  alt="line" />
                 </div>
-              </div>
 
-              <div class="row padding-top-25">
-                        <div class="col-md-12">
-                              <input class="form-control" id="name" placeholder="ФИО">
-                        </div>
-              		</div>
-                  <div class="row padding-top-25">
-                            <div class="col-md-12">
-                                  <input class="form-control" id="name" placeholder="Телефон">
-                            </div>
-                  		</div>
-                      <div class="row padding-top-25">
-                                <div class="col-md-12">
-                                      <input class="form-control" id="name" placeholder="Email">
-                                </div>
-                      		</div>
+                <div style="padding: 15px">
+                <select id="img-picker" class="image-picker show-html">
+                  <option data-img-src="assets/images/car1.png" data-img-class="first" data-img-alt="Page 1" value="1">   </option>
+                  <option data-img-src="assets/images/car2.png" data-img-alt="Page 2" value="2">  </option>
+                </select>
+                </div>
+                </div>
 
+                <div class="col-md-5">
+                  <div class="header1" id="popup-moreinfo-name"> НАЗВАНИЕ тачки</div>
+
+                  <div id="popup-moreinfo-price"> <span class="red-text-upper">2 222 333</span> <span class="rouble" style="font-size: 24px;">a</span></div>
+
+                  <div style="padding-top: 25px">
+                    <div style="padding-top: 5px"><span>Год выпуска: <span><span>2005</span></div>
+                    <div style="padding-top: 5px"><span>Пробег: <span><span>140 000 км</span></div>
+                    <div style="padding-top: 5px"><span>Цвет кузова: <span><span>Черный</span></div>
+                    <div style="padding-top: 5px"><span>Отделка салона: <span><span>Титановый жемчуг</span></div>
+                    <div style="padding-top: 5px"><span>Тип двигателя: <span><span>дизель</span></div>
+                    <div style="padding-top: 5px"><span>Объем двигателя: <span><span>6.0л</span></div>
+                    <div style="padding-top: 5px"><span>Мощность двигателя: <span><span>705лс</span></div>
+                    <div style="padding-top: 5px"><span>Коробка передач: <span><span>автомат</span></div>
+                </div>
+
+                <div style="padding-top: 25px">
+                  Описание автомобиля:</br>
+                  Здесь</br>
+                  Какой-то</br>
+                  Текст </br>
+                  Здесь</br>
+                  Какой-то</br>
+                  Текст </br>
+                  Здесь</br>
+                  Какой-то</br>
+                  Текст </br>
+                  Здесь</br>
+                  Какой-то</br>
+                  Текст </br>
+                  Здесь</br>
+                  Какой-то</br>
+                  Текст </br>
               </div>
-              <div class="modal-footer" style="text-align: left;">
-                <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" >Отправить</button>
-                <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">Закрыть</button>
               </div>
+     		</div>
+
+        <div class="row">
+          <div class="modal-footer" style="border-top: none">
+            <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom"><span class="rouble media-middle"> a </span> <span class="media-middle">Купить </span></button>
+            <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">К списку автомобилей</button>
+          </div>
+        </div>
             </div>
           </div>
         </div>
@@ -258,6 +269,12 @@
   <script>
     $(document).ready(function() {
       $('.selectpicker').selectpicker();
+      $("#img-picker").imagepicker({
+        clicked:function(){
+              let carImgPath = $(this).find("option[value='" + $(this).val() + "']").data('img-src');
+              $("#popup-moreinfo-car").attr("src", carImgPath);
+          }
+      });
     });
   </script>
 </body>

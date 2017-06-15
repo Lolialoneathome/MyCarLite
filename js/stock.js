@@ -25,7 +25,7 @@ function loadStocks()
       '      <ul class="list-inline" style="display: flex;justify-content: space-around;">' +
       '          <li onclick="showModalBuyCar(\''+car.id+'\')"><span class="rouble media-middle"> a </span> <span class="media-middle">Купить </span></li>' +
       '          <li style="text-align: center; border-right: 1px solid;"></li>' +
-      '          <li style="vertical-align: middle"><div class="media" style="text-align: center; margin: auto;">' +
+      '          <li onclick="showModalMoreInfo(\''+car.id+'\')" style="vertical-align: middle"><div class="media" style="text-align: center; margin: auto;">' +
       '             <div class="media-left media-top" style="padding: 3px">' +
       '              <img src="assets/images/read_more_btn.svg" alt="@l!" class="media-object"/>' +
       '              </div>' +

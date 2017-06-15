@@ -1,6 +1,12 @@
 $( document ).ready(function() {
+
+
+
+
     loadBestSellers();
     LoadFeedback();
+
+
 });
 
 
@@ -26,7 +32,7 @@ function loadBestSellers()
             '  <ul class="list-inline" style="display: flex;justify-content: space-around;">' +
             '      <li onclick="showModalBuyCar(\''+car.id+'\')"><span class="rouble media-middle"> a </span> <span class="media-middle">Купить </span></li>' +
             '      <li style="text-align: center; border-right: 1px solid;"></li>' +
-            '      <li style="vertical-align: middle">' +
+            '      <li onclick="showModalMoreInfo(\''+car.id+'\')" style="vertical-align: middle">' +
             '        <div class="media" style="text-align: center; margin: auto;">' +
             '         <div class="media-left media-top" style="padding: 3px">' +
             '          <img src="assets/images/read_more_btn.svg" alt="@l!" class="media-object"/>' +
@@ -90,29 +96,72 @@ function GetFeedback() {
 
 function showModalBuyCar(carId)
 {
-  let contaner = $("#modal-container");
   let car = GetCarById(carId);
-  //let html = '<!-- Modal --> ' +
-
-
-    //contaner.append($(html));
-    $('#myModal').modal('show')
+    $('#modalBuy').modal('show')
     {
       $("#popup-buy-name").html(car.name);
       $("#popup-buy-price").html(car.price);
       $("#popup-buy-description").html(car.description);
-      $("#popup-buy-image").attr("src", car.image);
+      $("#popup-buy-image").attr("src", car.images[0]);
     }
 }
 
 
 function GetCarById()
 {
-  return {id: 4, image: 'assets/images/car4.png', price: '34 534 543', name: 'Porsche Cayenne', description: '2011 г. / 3.6 л. / 120 000 км. / бензин'};
+  return {
+    id: 4,
+    images: ['assets/images/car4.png', 'assets/images/car3.png', 'assets/images/car2.png', 'assets/images/car1.png'],
+    price: '34 534 543',
+    name: 'Porsche Cayenne',
+    description: '2011 г. / 3.6 л. / 120 000 км. / бензин',
+    year: '2005',
+    mileage: '149 000 км',
+    color: 'черный',
+    saloon: 'титановый жемчуг',
+    engine: 'дизель',
+    engine_amount: '6.0',
+    power: '708 лс',
+    transmission: 'автомат',
+    full_description: 'Описание автомобиля:</br>Здесь</br>Какой-то</br>Текст </br>Здесь</br>Какой-то</br>Текст </br>Здесь</br>Какой-то</br>Текст </br>Здесь</br>Какой-то</br>Текст </br>Здесь</br>Какой-то</br>Текст </br>'
+    };
 }
 
 
 function showModalMoreInfo(carId)
 {
+  let car = GetCarById(carId);
+  //let html = '<!-- Modal --> ' +
+    //contaner.append($(html));
+    $('#modalMoreInfo').modal('show')
+    {
+      $("#popup-moreinfo-name").html(car.name);
+      $("#popup-moreinfo-price").html(car.price);
+      $("#popup-moreinfo-year").html(car.year);
+      $("#popup-moreinfo-mileage").html(car.mileage);
+      $("#popup-moreinfo-saloon").html(car.saloon);
+      $("#popup-moreinfo-engine").html(car.engine);
+      $("#popup-moreinfo-engine_amount").html(car.engine_amount);
+      $("#popup-moreinfo-power").html(car.power);
+      $("#popup-moreinfo-transmission").html(car.transmission);
+      $("#popup-moreinfo-full_description").html(car.full_description);
+      $("#popup-moreinfo-car").attr("src", car.images[0]);
+      let imgContainer = $("#img-picker");
+      let html = '';
 
+            imgContainer.html('');
+      car.images.forEach(function(image, i, arr) {
+        html += '<option data-img-src="' + image + '" data-img-alt="Page 1" value=' + (i + 1) +'> </option>';
+      });
+      imgContainer.append($(html));
+
+
+
+      $("#img-picker").imagepicker({
+        clicked:function(){
+              let carImgPath = $(this).find("option[value='" + $(this).val() + "']").data('img-src');
+              $("#popup-moreinfo-car").attr("src", carImgPath);
+          }
+      });
+    }
 }

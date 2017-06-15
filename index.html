@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.js"></script>
+
+  
   <link rel="stylesheet" href="styles.css">
   <script src="js/header.js"></script>
   <script src="js/onload.js"></script>
@@ -87,328 +92,378 @@
 
 
 
-        <ul data-toggle="collapse" data-target=".nav-collapse.in" class="nav navbar-nav nav-text collapsed-nav" style="cursor: pointer">
-          <li data-toggle="collapse" data-target=".nav-collapse.in">
-            <div class="nav-collapse navbar-collapse collapse">
-              <div class="dropdown" style="width: 225px">
-                <button class="dropbtn">Купить автомобиль</button>
-                <div class="dropdown-content">
-                  <a> Специальное предложения </a>
-                  <a> Автомобили в наличии </a>
-                  <a> Автомобили на заказ  </a>
-                </div>
+      <ul data-toggle="collapse" data-target=".nav-collapse.in" class="nav navbar-nav nav-text collapsed-nav" style="cursor: pointer">
+        <li data-toggle="collapse" data-target=".nav-collapse.in">
+          <div class="nav-collapse navbar-collapse collapse">
+            <div class="dropdown" style="width: 225px">
+              <button class="dropbtn">Купить автомобиль</button>
+              <div class="dropdown-content">
+                <a> Специальное предложения </a>
+                <a> Автомобили в наличии </a>
+                <a> Автомобили на заказ  </a>
               </div>
-          </li>
-          <li data-toggle="collapse" data-target=".nav-collapse.in">
-            <div class="nav-collapse navbar-collapse collapse">
-              <div class="dropdown" style="width: 225px">
-                <button class="dropbtn">Продать автомобиль</button>
-                <div class="dropdown-content">
-                  <a> Оценка стоимости </a>
-                  <a> Комиссионная продажа </a>
-                  <a> Быстрая продажа  </a>
-                  <a> Trade-In </a>
-                </div>
+            </div>
+        </li>
+        <li data-toggle="collapse" data-target=".nav-collapse.in">
+          <div class="nav-collapse navbar-collapse collapse">
+            <div class="dropdown" style="width: 225px">
+              <button class="dropbtn">Продать автомобиль</button>
+              <div class="dropdown-content">
+                <a> Оценка стоимости </a>
+                <a> Комиссионная продажа </a>
+                <a> Быстрая продажа  </a>
+                <a> Trade-In </a>
               </div>
-          </li>
-          <li data-toggle="collapse" data-target=".nav-collapse.in">
-            <div class="nav-collapse navbar-collapse collapse">
-              <div class="dropdown" style="width: 150px">
-                <button class="dropbtn">Услуги</button>
-                <div class="dropdown-content">
+            </div>
+        </li>
+        <li data-toggle="collapse" data-target=".nav-collapse.in">
+          <div class="nav-collapse navbar-collapse collapse">
+            <div class="dropdown" style="width: 150px">
+              <button class="dropbtn">Услуги</button>
+              <div class="dropdown-content">
 
-                </div>
               </div>
-          </li>
-          <li data-toggle="collapse" data-target=".nav-collapse.in">
-            <div class="nav-collapse navbar-collapse collapse">
-              <div class="dropdown" style="width: 225px">
-                <button class="dropbtn">О компании</button>
-                <div class="dropdown-content">
-                  <a> История / О компании </a>
-                  <a> Наши сотрудники </a>
-                  <a> Новости  </a>
-                  <a> Контакты </a>
-                  <a> Отзывы </a>
-                </div>
+            </div>
+        </li>
+        <li data-toggle="collapse" data-target=".nav-collapse.in">
+          <div class="nav-collapse navbar-collapse collapse">
+            <div class="dropdown" style="width: 225px">
+              <button class="dropbtn">О компании</button>
+              <div class="dropdown-content">
+                <a> История / О компании </a>
+                <a> Наши сотрудники </a>
+                <a> Новости  </a>
+                <a> Контакты </a>
+                <a> Отзывы </a>
               </div>
-          </li>
-        </ul>
+            </div>
+        </li>
+      </ul>
       </div>
-    </div>
-  </div>
-
-  <div class="slide-wrapper hideOnSmallScreen">
-    <div id="homepage-feature" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#homepage-feature" data-slide-to="0" class="active"></li>
-        <li data-target="#homepage-feature" data-slide-to="1"></li>
-      </ol>
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-
-        <div class="item active" style="background-image:url(assets/images/slider1.png)">
-        </div>
-
-        <div class="item" style="background-image:url(assets/images/slider2.png)">
-        </div>
-
-        <div class="item" style="background-image:url(assets/images/slider3.png)">
-        </div>
       </div>
-      <!-- /.carousel-inner -->
-      <!-- Controls -->
-      <a class="left carousel-control" href="#homepage-feature" data-slide="prev">
+      </div>
+
+      <div class="slide-wrapper hideOnSmallScreen">
+        <div id="homepage-feature" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#homepage-feature" data-slide-to="0" class="active"></li>
+            <li data-target="#homepage-feature" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item active" style="background-image:url(assets/images/slider1.png)">
+            </div>
+
+            <div class="item" style="background-image:url(assets/images/slider2.png)">
+            </div>
+
+            <div class="item" style="background-image:url(assets/images/slider3.png)">
+            </div>
+          </div>
+          <!-- /.carousel-inner -->
+          <!-- Controls -->
+          <a class="left carousel-control" href="#homepage-feature" data-slide="prev">
           <span class="fa fa-angle-left"></span>
         </a>
-      <a class="right carousel-control" href="#homepage-feature" data-slide="next">
+          <a class="right carousel-control" href="#homepage-feature" data-slide="next">
           <span class="fa fa-angle-right"></span>
         </a>
-    </div>
-    <!-- /#homepage-feature.carousel -->
-    <div class="red">
+        </div>
+        <!-- /#homepage-feature.carousel -->
+        <div class="red">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 red-content">
+                <div class="header1">TOYOTA CAMRY</div>
+                <div style="padding-top:25px; padding-bottom:25px">Весенние скидки до 100 000 рублей</div>
+                <div>
+                  <p><a class="btn btn-primary btn-custom-red  btn-primary-custom-red" style="padding-right: 25px; padding-left: 25px;" href="#" role="button">Подробнее</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container.slide-wrapper -->
+      <script type='text/javascript'>
+        $(document).ready(function() {
+          $('#homepage-feature').carousel({
+            interval: 2000
+          })
+        });
+      </script>
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 red-content">
-            <div class="header1">TOYOTA CAMRY</div>
-            <div style="padding-top:25px; padding-bottom:25px">Весенние скидки до 100 000 рублей</div>
+        <div class="row row-flex row-flex-wrap" style="margin-top: 0px">
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="header1 resp-text-center">on-line услуги</div>
+          </div>
+          <div class="col-md-2 col-sm-6 col-xs-6 border-right hide-border-on-small text-center ">
+            <div class="cursior-pointer routerLink">
+              <div class="small-icons">
+                <img class="img-responsive" src="assets/images/online-services/1_car_search.svg" alt="search icon" />
+              </div>
+              <p>Поиск автомобиля</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6 col-xs-6 border-right hide-border-on-small text-center ">
+            <div class="cursior-pointer routerLink">
+              <div class="small-icons">
+                <img class="img-responsive" src="assets/images/online-services/2_car_evaluation.svg" alt="search icon" />
+              </div>
+              <p>Оценка автомобиля</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6 col-xs-6 border-right hide-border-on-small text-center ">
+            <div class="cursior-pointer routerLink">
+              <div class="small-icons">
+                <img class="img-responsive" src="assets/images/online-services/3_trade_in.svg" alt="search icon" />
+              </div>
+              <p>Обмен автомобиля</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6 col-xs-6 hide-border-on-small text-center ">
+            <div class="cursior-pointer routerLink">
+              <div class="small-icons">
+                <img class="img-responsive" src="assets/images/online-services/4_feedback.svg" alt="search icon" />
+              </div>
+              <p>Обратная связь</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="combined-components gray-back">
+        <div class="container">
+          <div class="row padding-top-25">
+            <div class="header1 text-center">Комфортный салон автомобилей с пробегом</div>
+            <div class="red-line-img">
+              <img class="img-responsive" src="assets/images/red_line.png" alt="line" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-12" style="padding-bottom:10px">
+              <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="{{cssClass}} item text-center">
+                <div class="centered-icons">
+                  <img class="img-responsive" src="assets/images/StaticItems/1_price_active.svg" alt="no icon" />
+                </div>
+                <div class="padding-top-25">
+                  <p class="{{headerCssClass}}">Комфортная цена</p>
+                  <p>Пример разного всякого текста</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-12" style="padding-bottom:10px">
+              <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="{{cssClass}} item text-center">
+                <div class="centered-icons">
+                  <img class="img-responsive" src="assets/images/StaticItems/2_quality_active.svg" alt="no icon" />
+                </div>
+                <div class="padding-top-25">
+                  <p class="{{headerCssClass}}">Гарантия качества</p>
+                  <p>Пример разного всякого текста</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-12" style="padding-bottom:10px">
+              <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="{{cssClass}} item text-center">
+                <div class="centered-icons">
+                  <img class="img-responsive" src="assets/images/StaticItems/3_security_active.svg" alt="no icon" />
+                </div>
+                <div class="padding-top-25">
+                  <p class="{{headerCssClass}}">Безопасность</p>
+                  <p>Пример разного всякого текста</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="combined-components white-back">
+        <div class="container">
+          <div class="row">
+            <div class="padding-top-25">
+              <div class="header1 text-center">Лучшие предложения</div>
+              <div class="red-line-img">
+                <img class="img-responsive" src="assets/images/red_line.png" alt="line" />
+              </div>
+            </div>
+          </div>
+          <div class="row" id="best-sellers-container">
+
+          </div>
+
+          <div class="row" style="padding-top: 50px">
+            <div class="col-md-12 text-center">
+              <p><a class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" href="#" role="button">Посмотреть все предложения</a></p>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 50px">
+            <div class="padding-top-25">
+              <div class="header1 text-center">Отзывы наших клиентов</div>
+              <div class="red-line-img">
+                <img class="img-responsive" src="assets/images/red_line.png" alt="line" />
+              </div>
+            </div>
+          </div>
+          <div class="row" id="feedback-container">
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div id="modal-container">
+      </div>
+
+
+      <div class="modal fade" id="modalBuy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h4 class="modal-title header2" id="myModalLabel">Купить выбранный автомобиль</h4>
+              <div style="padding: 15px">
+                <div class="row" style="padding: 0px">
+                  <div class="col-md-3 col-xs-12  no-padding">
+                    <img class="img-responsive" id="popup-buy-image" alt="no icon" />
+                  </div>
+                  <div class="col-md-9 col-xs-12">
+                    <div class="pull-center-on-small">
+                      <div class="header3" id="popup-buy-name" style="padding-top: 2%"></div>
+                      <div class="input-group">
+                        <div class="red-bold-text" id="popup-buy-price"><span class="rouble">a</span></div>
+                        <div style="padding-top: 15px" id="popup-buy-description"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                  </div>
+                </div>
+              </div>
+              <div class="row padding-top-25">
+                <div class="col-md-12">
+                  <input class="form-control" id="name" placeholder="ФИО">
+                </div>
+              </div>
+              <div class="row padding-top-25">
+                <div class="col-md-12">
+                  <input class="form-control" id="name" placeholder="Телефон">
+                </div>
+              </div>
+              <div class="row padding-top-25">
+                <div class="col-md-12">
+                  <input class="form-control" id="name" placeholder="Email">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer" style="text-align: left;">
+              <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom">Отправить</button>
+              <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalMoreInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="min-width: 900px;">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-7">
+                  <div style="padding: 15px;">
+                    <img id="popup-moreinfo-car" class="img-responsive" style=" height: 100%; width: 100%;" alt="line" />
+                  </div>
+
+                  <div style="padding: 15px">
+                    <select id="img-picker" class="image-picker show-html">
+
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="header1" id="popup-moreinfo-name"> </div>
+
+                  <div > <span class="red-text-upper" id="popup-moreinfo-price"></span> <span class="rouble" style="font-size: 24px;">a</span></div>
+
+                  <div style="padding-top: 25px">
+                    <div style="padding-top: 5px"><span>Год выпуска: <span><span id="popup-moreinfo-year"></span></div>
+                    <div style="padding-top: 5px"><span>Пробег: <span><span id="popup-moreinfo-mileage"></span></div>
+                    <div style="padding-top: 5px"><span>Цвет кузова: <span><span id="popup-moreinfo-color"></span></div>
+                    <div style="padding-top: 5px"><span>Отделка салона: <span><span id="popup-moreinfo-mileage"></span></div>
+                    <div style="padding-top: 5px"><span>Тип двигателя: <span><span id="popup-moreinfo-engine"></span></div>
+                    <div style="padding-top: 5px"><span>Объем двигателя: <span><span id="popup-moreinfo-engine_amount"></span></div>
+                    <div style="padding-top: 5px"><span>Мощность двигателя: <span><span id="popup-moreinfo-power"></span></div>
+                    <div style="padding-top: 5px"><span>Коробка передач: <span><span id="popup-moreinfo-transmission"></span></div>
+                  </div>
+
+                  <div style="padding-top: 25px" id="popup-moreinfo-full_description">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="modal-footer" style="border-top: none">
+                  <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom"><span class="rouble media-middle"> a </span> <span class="media-middle">Купить </span></button>
+                  <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">К списку автомобилей</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <footer class="dark-gray-back">
+        <div class="container" style="padding-top: 50px;">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center">
+              <p>Подписка на специальные предложения</p>
+              <p>и новые поступления: </p>
+              <form class="form-horizontal" style="padding-top: 50px;">
+                <div class="form-group" style="margin-left: auto; margin-right: auto; width: 60%">
+                  <input type="email" class="form-control" id="email" placeholder="Имя">
+                </div>
+                <div class="form-group" style="margin-left: auto; margin-right: auto; width: 60%">
+                  <input type="password" class="form-control" id="pwd" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-custom-red  btn-primary-custom-red">Подписаться</button>
+                </div>
+              </form>
+
+              <p style="padding-top: 50px; text-transform: uppercase">г. Пермь, шоссе Космонавтов, 47а</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12 text-center">
+              <div>
+                <hr class="hr-spec">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 50px;padding-top: 25px; ">
             <div>
-              <p><a class="btn btn-primary btn-custom-red  btn-primary-custom-red" style="padding-right: 25px; padding-left: 25px;" href="#" role="button">Подробнее</a></p>
+              <div class="col-md-2 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12 text-center" style="height: 37px; line-height: 37px;">
+                <span style="vertical-align: middle;">Следите за новостями:</span>
+              </div>
+              <div class="col-md-2 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12 text-center">
+                <div class="svg-container">
+                  <img class="img-responsive center-block svg" src="assets/images/Soc/facebook.svg" alt="line" />
+                  <img class="img-responsive center-block svg" src="assets/images/Soc/inst.svg" alt="line" />
+                  <img class="img-responsive center-block svg" src="assets/images/Soc/vk.svg" alt="line" />
+                  <img class="img-responsive center-block svg" src="assets/images/Soc/youtube.svg" alt="line" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.container.slide-wrapper -->
-  <script type='text/javascript'>
-    $(document).ready(function() {
-      $('#homepage-feature').carousel({
-        interval: 2000
-      })
-    });
-  </script>
-  <div class="container">
-    <div class="row row-flex row-flex-wrap" style="margin-top: 0px">
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <div class="header1 resp-text-center">on-line услуги</div>
-      </div>
-      <div class="col-md-2 col-sm-6 col-xs-6 border-right hide-border-on-small text-center ">
-        <div class="cursior-pointer routerLink">
-          <div class="small-icons">
-            <img class="img-responsive" src="assets/images/online-services/1_car_search.svg" alt="search icon"/>
-          </div>
-          <p>Поиск автомобиля</p>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-6 col-xs-6 border-right hide-border-on-small text-center ">
-        <div class="cursior-pointer routerLink">
-          <div class="small-icons">
-            <img class="img-responsive" src="assets/images/online-services/2_car_evaluation.svg" alt="search icon"/>
-          </div>
-          <p>Оценка автомобиля</p>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-6 col-xs-6 border-right hide-border-on-small text-center ">
-        <div class="cursior-pointer routerLink">
-          <div class="small-icons">
-            <img class="img-responsive" src="assets/images/online-services/3_trade_in.svg" alt="search icon"/>
-          </div>
-          <p>Обмен автомобиля</p>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-6 col-xs-6 hide-border-on-small text-center ">
-        <div class="cursior-pointer routerLink">
-          <div class="small-icons">
-            <img class="img-responsive" src="assets/images/online-services/4_feedback.svg" alt="search icon"/>
-          </div>
-          <p>Обратная связь</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="combined-components gray-back">
-    <div class="container">
-      <div class="row padding-top-25">
-        <div class="header1 text-center">Комфортный салон автомобилей с пробегом</div>
-        <div class="red-line-img">
-          <img class="img-responsive" src="assets/images/red_line.png" alt="line" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-xs-12 col-sm-12" style="padding-bottom:10px">
-          <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="{{cssClass}} item text-center">
-            <div class="centered-icons">
-              <img class="img-responsive" src="assets/images/StaticItems/1_price_active.svg" alt="no icon" />
-            </div>
-            <div class="padding-top-25">
-              <p class="{{headerCssClass}}">Комфортная цена</p>
-              <p>Пример разного всякого текста</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-xs-12 col-sm-12" style="padding-bottom:10px">
-          <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="{{cssClass}} item text-center">
-            <div class="centered-icons">
-              <img class="img-responsive" src="assets/images/StaticItems/2_quality_active.svg" alt="no icon" />
-            </div>
-            <div class="padding-top-25">
-              <p class="{{headerCssClass}}">Гарантия качества</p>
-              <p>Пример разного всякого текста</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-xs-12 col-sm-12" style="padding-bottom:10px">
-          <div (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="{{cssClass}} item text-center">
-            <div class="centered-icons">
-              <img class="img-responsive" src="assets/images/StaticItems/3_security_active.svg" alt="no icon" />
-            </div>
-            <div class="padding-top-25">
-              <p class="{{headerCssClass}}">Безопасность</p>
-              <p>Пример разного всякого текста</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="combined-components white-back">
-    <div class="container">
-      <div class="row">
-        <div class="padding-top-25">
-            <div class="header1 text-center">Лучшие предложения</div>
-            <div class="red-line-img">
-               <img class="img-responsive" src="assets/images/red_line.png" alt="line"/>
-            </div>
-         </div>
-      </div>
-      <div class="row" id="best-sellers-container">
-
-      </div>
-
-      <div class="row" style="padding-top: 50px">
-        <div class="col-md-12 text-center">
-          <p><a class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" href="#" role="button">Посмотреть все предложения</a></p>
-        </div>
-      </div>
-      <div class="row" style="padding-top: 50px">
-        <div class="padding-top-25">
-            <div class="header1 text-center">Отзывы наших клиентов</div>
-            <div class="red-line-img">
-               <img class="img-responsive" src="assets/images/red_line.png" alt="line"/>
-            </div>
-         </div>
-      </div>
-      <div class="row" id="feedback-container">
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Modal -->
-  <div id="modal-container">
-  </div>
-
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
- <div class="modal-dialog">
- <div class="modal-content">
-   <div class="modal-body">
-     <h4 class="modal-title header2" id="myModalLabel">Купить выбранный автомобиль</h4>
-     <div style="padding: 15px" *ngFor="let special of specials">
-       <div class="row" style="padding: 0px">
-         <div class="col-md-3 col-xs-12  no-padding">
-           <img class="img-responsive" id="popup-buy-image" alt="no icon"/>
-         </div>
-         <div class="col-md-9 col-xs-12">
-           <div class="pull-center-on-small">
-             <div class="header3" id="popup-buy-name" style="padding-top: 2%"></div>
-                             <div class="input-group">
-             <div class="red-bold-text" id="popup-buy-price"><span class="rouble">a</span></div>
-             <div style="padding-top: 15px" id="popup-buy-description"></div>
-             </div>
-           </div>
-         </div>
-       <div>
-       </div>
-     </div>
-   </div>
-   <div class="row padding-top-25">
-             <div class="col-md-12">
-                   <input class="form-control" id="name" placeholder="ФИО">
-             </div>
-       </div>
-       <div class="row padding-top-25">
-                 <div class="col-md-12">
-                       <input class="form-control" id="name" placeholder="Телефон">
-                 </div>
-           </div>
-           <div class="row padding-top-25">
-                     <div class="col-md-12">
-                           <input class="form-control" id="name" placeholder="Email">
-                     </div>
-               </div>
-   </div>
-   <div class="modal-footer" style="text-align: left;">
-     <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" >Отправить</button>
-     <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">Закрыть</button>
-   </div>
- </div>
- </div>
-</div>
-
-
-  <footer class="dark-gray-back">
-    <div class="container" style="padding-top: 50px;">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center">
-          <p>Подписка на специальные предложения</p>
-          <p>и новые поступления: </p>
-          <form class="form-horizontal" style="padding-top: 50px;">
-            <div class="form-group" style="margin-left: auto; margin-right: auto; width: 60%">
-              <input type="email" class="form-control" id="email" placeholder="Имя">
-            </div>
-            <div class="form-group" style="margin-left: auto; margin-right: auto; width: 60%">
-              <input type="password" class="form-control" id="pwd" placeholder="E-mail">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-custom-red  btn-primary-custom-red">Подписаться</button>
-            </div>
-          </form>
-
-          <p style="padding-top: 50px; text-transform: uppercase">г. Пермь, шоссе Космонавтов, 47а</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12 text-center">
-          <div>
-            <hr class="hr-spec">
-          </div>
-        </div>
-      </div>
-      <div class="row" style="padding-bottom: 50px;padding-top: 25px; ">
-        <div>
-          <div class="col-md-2 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12 text-center" style="height: 37px; line-height: 37px;">
-            <span style="vertical-align: middle;">Следите за новостями:</span>
-          </div>
-          <div class="col-md-2 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12 text-center">
-            <div class="svg-container">
-              <img class="img-responsive center-block svg" src="assets/images/Soc/facebook.svg" alt="line" />
-              <img class="img-responsive center-block svg" src="assets/images/Soc/inst.svg" alt="line" />
-              <img class="img-responsive center-block svg" src="assets/images/Soc/vk.svg" alt="line" />
-              <img class="img-responsive center-block svg" src="assets/images/Soc/youtube.svg" alt="line" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-    $(document).ready(function() {
-      $('.selectpicker').selectpicker();
-    });
-  </script>
+      </footer>
+      <script>
+        $(document).ready(function() {
+          $('.selectpicker').selectpicker();
+        });
+      </script>
 </body>
 
 </html>

@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.js"></script>
+
   <link rel="stylesheet" href="styles.css">
   <script src="js/header.js"></script>
   <script src="js/onload.js"></script>
@@ -261,52 +264,103 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-body">
-       <h4 class="modal-title header2" id="myModalLabel">Купить выбранный автомобиль</h4>
-       <div style="padding: 15px" *ngFor="let special of specials">
-         <div class="row" style="padding: 0px">
-           <div class="col-md-3 col-xs-12  no-padding">
-             <img class="img-responsive" id="popup-buy-image" alt="no icon"/>
-           </div>
-           <div class="col-md-9 col-xs-12">
-             <div class="pull-center-on-small">
-               <div class="header3" id="popup-buy-name" style="padding-top: 2%"></div>
-                               <div class="input-group">
-               <div class="red-bold-text" id="popup-buy-price"><span class="rouble">a</span></div>
-               <div style="padding-top: 15px" id="popup-buy-description"></div>
-               </div>
-             </div>
-           </div>
-         <div>
-         </div>
-       </div>
-     </div>
-     <div class="row padding-top-25">
-               <div class="col-md-12">
-                     <input class="form-control" id="name" placeholder="ФИО">
-               </div>
-         </div>
-         <div class="row padding-top-25">
-                   <div class="col-md-12">
-                         <input class="form-control" id="name" placeholder="Телефон">
-                   </div>
-             </div>
-             <div class="row padding-top-25">
-                       <div class="col-md-12">
-                             <input class="form-control" id="name" placeholder="Email">
-                       </div>
-                 </div>
-     </div>
-     <div class="modal-footer" style="text-align: left;">
-       <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" >Отправить</button>
-       <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">Закрыть</button>
-     </div>
-   </div>
-   </div>
-  </div>
+    <div class="modal fade" id="modalBuy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4 class="modal-title header2" id="myModalLabel">Купить выбранный автомобиль</h4>
+            <div style="padding: 15px">
+              <div class="row" style="padding: 0px">
+                <div class="col-md-3 col-xs-12  no-padding">
+                  <img class="img-responsive" id="popup-buy-image" alt="no icon" />
+                </div>
+                <div class="col-md-9 col-xs-12">
+                  <div class="pull-center-on-small">
+                    <div class="header3" id="popup-buy-name" style="padding-top: 2%"></div>
+                    <div class="input-group">
+                      <div class="red-bold-text" id="popup-buy-price"><span class="rouble">a</span></div>
+                      <div style="padding-top: 15px" id="popup-buy-description"></div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                </div>
+              </div>
+            </div>
+            <div class="row padding-top-25">
+              <div class="col-md-12">
+                <input class="form-control" id="name" placeholder="ФИО">
+              </div>
+            </div>
+            <div class="row padding-top-25">
+              <div class="col-md-12">
+                <input class="form-control" id="name" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="row padding-top-25">
+              <div class="col-md-12">
+                <input class="form-control" id="name" placeholder="Email">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="text-align: left;">
+            <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom">Отправить</button>
+            <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalMoreInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="min-width: 900px;">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-7">
+                <div style="padding: 15px;">
+                  <img id="popup-moreinfo-car" class="img-responsive" style=" height: 100%; width: 100%;" alt="line" />
+                </div>
+
+                <div style="padding: 15px">
+                  <select id="img-picker" class="image-picker show-html">
+
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <div class="header1" id="popup-moreinfo-name"> </div>
+
+                <div > <span class="red-text-upper" id="popup-moreinfo-price"></span> <span class="rouble" style="font-size: 24px;">a</span></div>
+
+                <div style="padding-top: 25px">
+                  <div style="padding-top: 5px"><span>Год выпуска: <span><span id="popup-moreinfo-year"></span></div>
+                  <div style="padding-top: 5px"><span>Пробег: <span><span id="popup-moreinfo-mileage"></span></div>
+                  <div style="padding-top: 5px"><span>Цвет кузова: <span><span id="popup-moreinfo-color"></span></div>
+                  <div style="padding-top: 5px"><span>Отделка салона: <span><span id="popup-moreinfo-mileage"></span></div>
+                  <div style="padding-top: 5px"><span>Тип двигателя: <span><span id="popup-moreinfo-engine"></span></div>
+                  <div style="padding-top: 5px"><span>Объем двигателя: <span><span id="popup-moreinfo-engine_amount"></span></div>
+                  <div style="padding-top: 5px"><span>Мощность двигателя: <span><span id="popup-moreinfo-power"></span></div>
+                  <div style="padding-top: 5px"><span>Коробка передач: <span><span id="popup-moreinfo-transmission"></span></div>
+                </div>
+
+                <div style="padding-top: 25px" id="popup-moreinfo-full_description">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="modal-footer" style="border-top: none">
+                <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom"><span class="rouble media-middle"> a </span> <span class="media-middle">Купить </span></button>
+                <button type="button" class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg btn-lg-custom" data-dismiss="modal">К списку автомобилей</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   <footer class="dark-gray-back">
     <div class="container" style="padding-top: 50px;">
